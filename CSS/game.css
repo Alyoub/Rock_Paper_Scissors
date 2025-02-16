@@ -1,0 +1,44 @@
+body
+{
+  font-family: arial;
+  background-color: lightblue;
+}
+.bt
+{
+  margin-left: 200px;
+  margin-top: 200px;
+}
+.ree
+{
+  font-family: arial;
+}
+.bt1,
+.bt2,
+.bt3
+{
+  border-radius: 70px;
+}
+.rock,
+.Scissors,
+.paper
+{
+  width: 100px;
+  height: 100px;
+}
+p
+{
+  font-size: arial;
+}
+.res1
+{
+  background-color: black;
+  border: none;
+  color: white;
+  padding-left: 20px;
+  font-size: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+
+}

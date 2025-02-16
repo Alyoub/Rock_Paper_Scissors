@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="CSS/game.css">
+	</head>
+	<body>
+    <div class="bt">
+      <button class="bt1" onclick="
+        playGame('Rock');
+        ">
+        <img  class="rock" src="logo/rock.svg">
+      </button>
+      <button  class="bt2" onclick="
+      playGame('Paper');
+      ">
+        <img  class="paper" src="logo/paper.svg">
+      </button>
+      <button class="bt3" onclick="
+      playGame('Scissors');
+      ">
+        <img  class="Scissors" src="logo/Scissors.svg">
+      </button>
+      <p class="wq"></p>
+      <p class="res">
+      </p>
+      <p class="ree">
+
+      </p>
+      <button class="res1" onclick="
+        score.lose = 0;
+        score.tie = 0;
+        score.win = 0;
+
+        localStorage.removeItem('score');
+        console.log('Score was reset');
+        update();
+      ">
+        Reset Score
+      </button>
+    </div>
+		<script src="JS/game.js">
+            
+        </script>
+	</body>
+</html>
