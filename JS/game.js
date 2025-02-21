@@ -99,3 +99,39 @@ let score = JSON.parse(localStorage.getItem('score'));
         document.querySelector('.ree').innerHTML = `Wines : ${score.win} , Loses : ${score.lose}, Ties : ${score.tie}`;
       }
       
+ 
+	  document.querySelector('.bt1').addEventListener('click', () => {
+		playGame('Rock');
+	  });
+
+	  document.querySelector('.bt2').addEventListener('click', () => {
+		playGame('paper');
+	  });
+
+	  document.querySelector('.bt3').addEventListener('click', () => {
+		playGame('Scissors');
+	  });
+
+	  document.body.addEventListener('keydown', (event) => {
+
+		if(event.key === 'r' || event.key === 'R')
+			playGame('Rock');
+		else if(event.key === 's' || event.key === 'S')
+			playGame('Scissors');
+		else if(event.key === 'p' || event.key === 'P')
+			playGame('paper');
+	  });
+
+	  document.querySelector('.res1').addEventListener('click', () => {
+
+			score.lose = 0;
+			score.tie = 0;
+			score.win = 0;
+
+			localStorage.removeItem('score');
+			update();
+	  });
+
+	  document.querySelector('.autoPlay').addEventListener('click', () => {
+			autoplay();
+	  });

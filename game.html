@@ -5,19 +5,13 @@
 	</head>
 	<body>
     <div class="bt">
-      <button class="bt1" onclick="
-        playGame('Rock');
-        ">
+      <button class="bt1">
         <img  class="rock" src="logo/rock.svg">
       </button>
-      <button  class="bt2" onclick="
-      playGame('Paper');
-      ">
+      <button  class="bt2">
         <img  class="paper" src="logo/paper.svg">
       </button>
-      <button class="bt3" onclick="
-      playGame('Scissors');
-      ">
+      <button class="bt3">
         <img  class="Scissors" src="logo/Scissors.svg">
       </button>
       <p class="wq"></p>
@@ -26,20 +20,10 @@
       <p class="ree">
 
       </p>
-      <button class="res1" onclick="
-        score.lose = 0;
-        score.tie = 0;
-        score.win = 0;
-
-        localStorage.removeItem('score');
-        console.log('Score was reset');
-        update();
-      ">
+      <button class="res1">
         Reset Score
       </button>
-      <button class="autoPlay" onclick="
-        autoplay();
-      ">
+      <button class="autoPlay">
         Auto Play
       </button>
     </div>
