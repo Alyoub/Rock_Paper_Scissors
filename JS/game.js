@@ -24,6 +24,31 @@ let score = JSON.parse(localStorage.getItem('score'));
 			return res;
 	}
 
+	let autoplaying = false;
+	let getID;
+
+	function autoplay()
+	{
+		let stopPlaying = document.querySelector('.autoPlay');
+		if(!autoplaying)
+		{
+			getID = setInterval(function(){
+				let pcMv = pcMove();
+				playGame(pcMv)
+			}, 1000)
+			autoplaying = true;
+			stopPlaying.innerHTML = 'Stop Play';
+			stopPlaying.classList.add('stop');
+		}
+		else
+		{
+			clearInterval(getID);
+			autoplaying = false;
+			stopPlaying.innerHTML = 'Auto Play';
+			stopPlaying.classList.remove('stop');
+		}
+	}
+
 	function playGame(myMove)
 	{
 		let xp = pcMove();

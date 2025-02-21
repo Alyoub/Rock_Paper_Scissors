@@ -29,7 +29,9 @@ p
 {
   font-size: arial;
 }
-.res1
+.res1,
+.autoPlay,
+.stop
 {
   background-color: black;
   border: none;
